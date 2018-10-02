@@ -666,6 +666,12 @@ function onclickProps() {
     }
 }
 
+function onclickProps2() {
+    for (var i = 0; i < prop2List.length; i++) {
+        prop2List[i].addEventListener('click', bindFunction, false);
+    }
+}
+
 function bindFunction() {
     document.getElementById("demo").innerHTML = mainFunction();
 }
@@ -776,6 +782,21 @@ function mainFunction() {
                 }
             }
         }
+        for (var j = 0; j < prop2List.length; j++) {
+            if (prop2List[j].checked == true) {
+                for (var k = 0; k < Object.keys(new_clothes[i]).length; k++) {
+                    if ((Object.keys(new_clothes[i])[k] != "Name") &&
+                        (Object.keys(new_clothes[i])[k] != "Sex") &&
+                        (Object.keys(new_clothes[i])[k] != "Type") &&
+                        (Object.keys(new_clothes[i])[k] != "总数")) {
+                        if (Object.keys(new_clothes[i])[k] ==
+                            [propList[j].nextElementSibling.innerText]) {
+                            accumProps += Object.values(new_clothes[i])[k]*0.5;
+                        }
+                    }
+                }
+            }
+        }
         new_clothes[i].总数 = accumProps;
     }
     new_clothes = sortArrayByValue(new_clothes, '总数');
@@ -870,8 +891,10 @@ function writeOutput(new_array) {
 // start
 var typeList = document.getElementsByClassName("filterType");
 var propList = document.getElementsByClassName("propsBox");
+var prop2List = document.getElementsByClassName("propsBox2");
 // init screen
 document.getElementById("demo").innerHTML = mainFunction();
 // on event
 onclickType();
 onclickProps();
+onclickProps2();
