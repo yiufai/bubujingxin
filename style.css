@@ -1,0 +1,58 @@
+body {
+    background-color: mistyrose;
+}
+
+th {
+    width: 80px;
+    text-align: left;
+}
+
+td {
+    border: 2px solid black;
+    font-size: 25px;
+}
+
+.resulttable {
+    border-collapse: collapse;
+}
+
+.sex {
+    background-color: rgb(149, 133, 238);
+}
+
+.characteristic {
+    background-color: rgb(149, 250, 149);
+}
+
+.characteristic2 {
+    background-color: rgb(250, 235, 104);
+}
+
+.clothestype {
+    background-color: rgb(178, 223, 250);
+}
+
+.outputstyle {
+    color:red;
+    width: 80px;
+    text-align: left;
+}
+
+.greytext {
+    background-color: lightgrey;
+}
+.greentext {
+    background-color: lightgreen;
+}
+.bluetext {
+    background-color: rgb(132, 123, 255);
+}
+.purpletext {
+    background-color: rgb(241, 106, 219);
+}
+.orangetext {
+    background-color: orange;
+}
+.redtext {
+    background-color: red;
+}
